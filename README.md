@@ -46,9 +46,13 @@ VMware Workstation Lab
 
 ### ✔ Installed Windows Server 2022  
 Configured static IP, hostname, Windows updates.
+![Server Manager Initial Dashboard](screenshots/server-install-dashboard.png)
+
 
 ### ✔ Promoted DC01 to Domain Controller  
 Domain: **C.LOCAL**
+![DC Promotion Screen](screenshots/dc_promotion.png)
+
 
 ### ✔ DNS Installed  
 Forward lookup zones configured; verified workstation DNS registration.
@@ -70,7 +74,7 @@ Company
 ├── Workstations
 └── Groups
 
-
+![OU Structure](screenshots/ou-structure.png)
 
 Each department contains users + a matching security group.
 
@@ -102,8 +106,14 @@ Created department users and groups:
 Using a shared UNC path:
 \\DC01\Wallpapers\company.jpg
 
+![Wallpaper GPO Settings](screenshots/wallpaper-gpo.png)
+![Wallpaper Applied - Client View](screenshots/wallpaper-share.png)
+
+
 ### ✔ Block Control Panel  
 User Configuration → Administrative Templates → Control Panel → Prohibit Access
+![Block Control Panel GPO Test](screenshots/gpo-control-panel-block.png)
+
 
 ### ✔ Block USB Storage  
 Computer Configuration → Administrative Templates → System → Removable Storage Access
@@ -138,6 +148,8 @@ Permissions Applied:
 | Finance | Finance-Staff     | Modify      |
 | Sales   | Sales-Staff       | Modify      |
 | IT      | IT                | Full Control |
+![HR NTFS Permissions](screenshots/hr-ntfs-permissions.png)
+
 
 ### ❌ Issue Encountered  
 User could access HR but not Sales.
@@ -156,6 +168,9 @@ User Configuration → Preferences → Windows Settings → Drive Maps
 Mapped:
 
 S: → \\DC01\CompanyData
+![Drive Map GPO](screenshots/s-drive-gpo.png)
+![S Drive on Client](screenshots/s-drive-client.png)
+
 
 Users only see folders allowed by NTFS permissions.
 
@@ -179,10 +194,11 @@ Shared the HomeFolders directory → Assigned correct share permissions → AD s
 
 - Installed *Print and Document Services*
 - Created dummy network printer (LPT1 port)
+![Printer Deployment GPO](screenshots/offcieprinter.png)
 - Shared as: \\DC01\OfficePrinter
 - Deployed printer using GPO
 - Verified printer installation on Windows 10 & 11 clients
-
+![Printer Installed on Client](screenshots/printer-client.png)
 ---
 
 # 🛠️ 9. Help Desk Simulation Tasks
