@@ -28,15 +28,16 @@ Network used: **192.168.192.130 – 134**
 VMware Workstation Lab
 │
 ├── DC01 (Windows Server 2022)
-│ ├── Active Directory Domain Services
-│ ├── DNS
-│ ├── Group Policy Management
-│ ├── File Server
-│ ├── Print Server
-│ └── Home Folder Server
+│    ├── Active Directory Domain Services
+│    ├── DNS
+│    ├── Group Policy Management
+│    ├── File Server
+│    ├── Print Server
+│    └── Home Folder Server
 │
 ├── WIN10-CLIENT (Domain Joined)
 └── WIN11-CLIENT (Domain Joined)
+
 
 
 ---
@@ -62,12 +63,13 @@ Forward lookup zones configured; verified workstation DNS registration.
 
 Company
 ├── Employees
-│ ├── HR
-│ ├── Finance
-│ ├── Sales
-│ └── IT
+│    ├── HR
+│    ├── Finance
+│    ├── Sales
+│    └── IT
 ├── Workstations
 └── Groups
+
 
 
 Each department contains users + a matching security group.
@@ -98,6 +100,8 @@ Created department users and groups:
 
 ### ✔ Desktop Wallpaper  
 Using a shared UNC path:
+\\DC01\Wallpapers\company.jpg
+
 ### ✔ Block Control Panel  
 User Configuration → Administrative Templates → Control Panel → Prohibit Access
 
